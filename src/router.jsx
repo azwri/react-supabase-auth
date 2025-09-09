@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
+import Dashboard from "./components/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 
 const router = createBrowserRouter([
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <PrivateRoute>{/* Home or dashboard component here */}</PrivateRoute>,
+                element: <PrivateRoute></PrivateRoute>,
             },
             {
                 path: 'signin',
@@ -22,7 +23,10 @@ const router = createBrowserRouter([
                 path: 'signup',
                 element: <Signup />,
             },
-            // Add other protected or public routes here
+            {
+                path: 'dashboard',
+                element: <PrivateRoute><Dashboard /></PrivateRoute>,
+            },
         ],
     },
 ]);

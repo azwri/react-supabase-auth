@@ -14,9 +14,6 @@ function Signin() {
     if (session) {
       navigate('/');
     }
-    if (session === undefined) {
-      return <div>Loading...</div>;
-    }
   }, [session, navigate]);
 
 

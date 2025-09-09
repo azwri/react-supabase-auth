@@ -14,9 +14,6 @@ function Signup() {
     if (session) {
       navigate('/');
     }
-    if (session === undefined) {
-      return <div>Loading...</div>;
-    }
   }, [session, navigate]);
 
   const handleSignup = async (e) => {

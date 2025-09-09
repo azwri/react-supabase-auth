@@ -38,6 +38,9 @@ function Nav() {
             </Link>
           </>
         )}
+        <Link to="/dashboard" className="text-blue-500 hover:underline">
+          Dashboard
+        </Link>
       </nav>
     </div>
   );
